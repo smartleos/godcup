@@ -1,0 +1,21 @@
+// 行動裝置優先斷點設置
+@mixin oversize{
+    @media(min-width:1440px){
+        @content;
+    }
+}
+@mixin desk{
+    @media(min-width:1280px){
+        @content;
+    }
+}
+@mixin bpad{
+    @media(min-width:1024px){
+        @content;
+    }
+}
+@mixin pad{
+    @media(min-width:768px){
+        @content;
+    }
+}

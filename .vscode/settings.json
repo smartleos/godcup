@@ -1,0 +1,13 @@
+{
+    "liveSassCompile.settings.formats":[
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "~/../../css"
+        },
+    ],
+    "nuxt.isNuxtApp": false,
+    // "liveSassCompile.settings.includeItems": [
+    //     "~/../assets/style"
+    // ]
+}

@@ -1,0 +1,97 @@
+:root {
+    --vh: 1vh;
+}
+
+::selection {
+    color: map-get($colors, white);
+    background-color: map-get($admin-colors, primary);
+}
+
+@include get-container;
+@include grid-system;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, dialog, div, dl, dt, em, embed, fieldset, figcaption, figure, font, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, meter, nav, object, ol, output, p, pre, progress, q, rp, rt, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, time, u, ul, var, video, xmp {
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    font-style: normal;
+    display: block;
+}
+
+html,
+body,
+button,
+input,
+textarea {
+    font-family: map-get($font-family, default);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    font-size: 16px;
+    @include oversize {
+        font-size: 20px;
+    }
+}
+
+// html,
+// body {
+//     @include typo('body', 1);
+
+//     min-width: 320px;
+//     overscroll-behavior: none;
+// }
+
+input,
+textarea {
+    @include typo('body', 1);
+
+    border: none;
+    appearance: none;
+}
+
+pre {
+    white-space: pre-line;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover,
+    &:active,
+    &:focus {
+        outline: 0;
+    }
+}
+
+button {
+    @include typo('button', 1);
+
+    color: currentColor;
+    background-color: transparent;
+}
+
+#wrapper {
+    padding-top: map-get($header-height, desktop);
+    @include media-breakpoint-down(desktop) {
+        padding-top: map-get($header-height, tablet);
+    }
+    @include media-breakpoint-down(tablet) {
+        padding-top: map-get($header-height, mobile);
+    }
+}
+
+.-editor {
+    @include editor-setting;
+}

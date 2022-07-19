@@ -1,0 +1,12 @@
+.login h1 a {
+  background: url("~@/assets/img/logo.svg") no-repeat center/cover !important;
+  pointer-events: none;
+}
+
+.login h1 a::before {
+  content: '';
+  display: block;
+  padding-bottom: 100%;
+  width: 100%;
+}
+/*# sourceMappingURL=login.css.map */
