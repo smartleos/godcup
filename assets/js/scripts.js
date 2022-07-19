@@ -668,9 +668,6 @@ function onChangepass() {
 //         console.log("open")
 //         $(icon).toggleClass("show")
 //     }
-    
-//     console.log(icon)
-//     console.log(qacontent)
 // });
 
 $(".status_btn").on('click', function(e){
